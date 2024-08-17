@@ -1,0 +1,22 @@
+{
+  "name": "puny-grape-hide-4ee6w",
+  "productName": "puny-grape-hide-4ee6w",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "valdragon",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager . The_Garden_Draft --platform=win32 --arch=x64 --overwrite --asar=true --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=The_Garden_Draft"
+  },
+  "dependencies": {
+    "electron-packager": "17.1.2",
+    "jquery": "^3.7.1",
+    "jQuery": "^1.7.4",
+    "jquery-csv": "^1.0.40"
+  },
+  "devDependencies": {
+    "electron": "31.4.0"
+  }
+}

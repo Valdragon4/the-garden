@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liste joueur</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="draft.js"></script>
+    <script src="cost.js"></script>
+    <script src="list.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="Seelist">Player List</a></li>
+            <li><a href="#" id="Seedraft">Draft</a></li>
+            <li><a href="#" id="Seecost">Costs</a></li>
+        </ul>
+    </nav>
+<div id="playerList">
+    <h1>Player list</h1>
+        <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
+        <input type="number" id="cost" name="cost" placeholder="Cost" min="0" max="5" >
+        <label for="file">or choose a file:</label>
+        <input type="file" id="file" name="file" accept=".csv">
+        <button id="save">Submit</button>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</div>
+
+
+
+<style>
+    #selectionJoueurs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    select {
+        width: 100px;
+        height: 30px;
+    }
+
+    #draftButton {
+        width: 100px;
+        height: 30px;
+    }
+
+    #draftResult {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<div id="draft" hidden>
+    <h1>Draft</h1>
+    <div id="selectionJoueurs">
+    </div>
+    <button id="draftButton">Draft</button>
+    <div id="draftResult">
+        <div id="costsEquipes" hidden>
+            <h2>Costs moyens</h2>
+            <p id="costsResult"></p>
+            <p id="costsResult2"></p>
+        </div>
+        <table id="draftTable">
+            <thead>
+                <tr>
+                    <th>Equipe 1</th>
+                    <th>Equipe 2</th>
+                </tr>
+            </thead>
+            <tbody id="draftTableBody">
+            </tbody>
+        </table>
+</div>
+
+
+
+
+<div id="cost" hidden>
+    <h1>Costs</h1>
+    <button id="costButton">Cost</button>
+    <p id="costResult"></p>
+</div>
+</body>
+</html>
